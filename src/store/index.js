@@ -8,9 +8,18 @@ export default new Vuex.Store({
     userIsConnected: false,
     userIsReady: false,
     opponentIsConnected: false,
-    opponentIsReady: false
+    opponentIsReady: false,
+    isVertical: false
   },
-  mutations: {},
-  actions: {},
+  mutations: {
+    ROTATE_SHIP (state, payload) {
+      this.state.isVertical = payload
+    }
+  },
+  actions: {
+    rotateShip ({ commit }, payload) {
+      commit('ROTATE_SHIP', payload)
+    }
+  },
   modules: {}
 })

@@ -28,7 +28,6 @@ export default {
     userIsConnected () {
       return this.$store.state.userIsConnected
     },
-
     userIsReady () {
       return this.$store.state.userIsReady
     },
